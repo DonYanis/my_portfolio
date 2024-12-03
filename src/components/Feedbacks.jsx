@@ -6,15 +6,18 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
+import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+
 const FeedbackCard = ({
   index,
   testimonial,
   name,
-  designation
+  designation,
+  image
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+    className='bg-black-200 p-10 rounded-3xl w-[320px] mr-[20px]'
   >
     <p className='text-white font-black text-[48px]'>"</p>
 
@@ -30,10 +33,26 @@ const FeedbackCard = ({
             {designation}
           </p>
         </div>
+        <img
+          src={image}
+          alt={`feedback_by-${name}`}
+          className='w-10 h-10 rounded-full object-cover'
+        />
       </div>
     </div>
   </motion.div>
 );
+
+const LeftArrow = () => {
+  const { scrollPrev } = React.useContext(VisibilityContext);
+  return <button className="text-[42px]" onClick={() => scrollPrev()}>{"<"}</button>;
+};
+
+// Right Arrow Component
+const RightArrow = () => {
+  const { scrollNext } = React.useContext(VisibilityContext);
+  return <button className="text-[42px]" onClick={() => scrollNext()}>{">"}</button>;
+};
 
 const Feedbacks = () => {
   return (
@@ -46,10 +65,14 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`-mt-20 pb-14 ${styles.paddingX} `}>
+      <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} className="react-horizontal-scrolling-menu overflow-hidden">
+
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          <FeedbackCard key={testimonial.name} itemId={testimonial.name} index={index} {...testimonial} />
         ))}
+        </ScrollMenu>
+
       </div>
     </div>
   );

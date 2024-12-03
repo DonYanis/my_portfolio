@@ -70,6 +70,11 @@ import ttt2 from "./projects/ttt2.png";
 import com from "./projects/com.png";
 
 import li from "./li.svg"
+
+import ny from "./testimonails/ny.png"
+import bm from "./testimonails/bm.jpeg"
+import bc from "./testimonails/bc.jpeg"
+
 export {
   li,
   uca,
@@ -136,5 +141,8 @@ export {
   ta2 ,
   ttt1,
   ttt2,
-  com
+  com,
+  ny,
+  bm,
+  bc,
 };

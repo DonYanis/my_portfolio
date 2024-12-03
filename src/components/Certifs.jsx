@@ -5,6 +5,8 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { certifications } from "../constants";
 
+import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+
 
 const CertifCard = ({
   name,
@@ -18,7 +20,7 @@ const CertifCard = ({
     <motion.div >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450, }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl w-[360px] mr-[10px]'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -52,6 +54,17 @@ const CertifCard = ({
   );
 };
 
+const LeftArrow = () => {
+  const { scrollPrev } = React.useContext(VisibilityContext);
+  return <button className="text-[42px]" onClick={() => scrollPrev()}>{"<"}</button>;
+};
+
+// Right Arrow Component
+const RightArrow = () => {
+  const { scrollNext } = React.useContext(VisibilityContext);
+  return <button className="text-[42px]" onClick={() => scrollNext()}>{">"}</button>;
+};
+
 const Certifs = () => {
   return (
     < >
@@ -73,11 +86,13 @@ const Certifs = () => {
            </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-20 '>
         
-      {certifications.map((certif, index) => (
-          <CertifCard key={`certif-${index}`} index={index} {...certif} />
-        ))}
+        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} className="react-horizontal-scrolling-menu overflow-hidden">
+          {certifications.map((certif, index) => (
+            <CertifCard key={`certif-${index}`} itemId={`certif-${index}`}  index={index} {...certif} />
+          ))}
+        </ScrollMenu>
       </div>
     </>
   );

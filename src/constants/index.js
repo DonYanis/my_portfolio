@@ -59,7 +59,10 @@ import {
   ta2 ,
   ttt1,
   ttt2,
-  com
+  com,
+  ny,
+  bm,
+  bc
 
 } from "../assets";
 
@@ -289,19 +292,19 @@ const testimonials = [
     testimonial:"Working with Yanis on several web projects was a great experience—his exceptional skills and creativity make the impossible possible.",
      name: "Nadir Nait Yahia",
     designation: "CS Student",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
+    image: ny,
   },
   {
-    testimonial:"Yanis was an excellent student of mine, consistently demonstrating dedication, skill, and a strong eagerness to learn.",
+    testimonial:"Yanis was an excellent student, consistently demonstrating dedication, skill, and a strong eagerness to learn.",
     name: "Chemseddine Berbague",
     designation: "Professor",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: bc,
   },
   {
-    testimonial: "I've never seen someone like Yanis in terms of analytical thinking and problem-solving.",
+    testimonial: "I've never encountered  anyone like Yanis when it comes to analytical thinking and problem-solving.",
     name: "Billal Mokhtari",
     designation: "Phd Student",
-    image: "https://randomuser.me/api/portraits/men/6.jpg",
+    image: bm,
   },
 ];
 

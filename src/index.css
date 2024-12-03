@@ -215,3 +215,34 @@
   box-shadow: 0 4px 10px rgba(255, 0, 127, 0.5); /* Optional shadow for extra shine */
   transition: background-position 0.5s ease; /* Smooth transition */
 }
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* Style the scrollbar itself */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+  height: 10px; /* height of horizontal scrollbar */
+}
+
+/* Style the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #55555536; /* color of the thumb */
+  border: 2px solid #55555536; /* border around the thumb */
+}
+
+/* Style the track (part of the scrollbar that the thumb slides along) */
+::-webkit-scrollbar-track {
+  background-color: #050816; /* track color */
+}
+
+/* Optional: style the scrollbar when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #55555542; /* change thumb color when hovered */
+}
+
