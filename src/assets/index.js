@@ -51,6 +51,10 @@ import c15 from "./certs/15.png";
 import c16 from "./certs/16.png";
 import c17 from "./certs/17.png";
 import c18 from "./certs/18.png";
+import c1a from "./certs/dsa_dc.png";
+import c1b from "./certs/ia_da.png";
+import c1c from "./certs/ibm_bi.png";
+import c1d from "./certs/mic_bi.png";
 
 import cg1 from "./projects/cg1.png";
 import cg2 from "./projects/cg2.png";
@@ -145,4 +149,8 @@ export {
   ny,
   bm,
   bc,
+  c1a,
+  c1b,
+  c1c,
+  c1d
 };

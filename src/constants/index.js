@@ -62,7 +62,11 @@ import {
   com,
   ny,
   bm,
-  bc
+  bc,
+  c1a,
+  c1b,
+  c1c,
+  c1d
 
 } from "../assets";
 
@@ -262,7 +266,7 @@ const experiences = [
   ],  
     thoghts : "During my machine learning internship, I had the opportunity to work on diverse projects that strengthened my skills in data preprocessing, model selection, and evaluation. I worked on genre classification using Logistic Regression and Naive Bayes, fraud detection in financial transactions with models like KNN and Random Forest, and customer churn prediction using Decision Trees and XGBoost, learning how to handle real-world datasets and select relevant features. Additionally, I explored spam detection in SMS messages using various models, as well as character-level text generation with LSTM-based RNNs, deepening my understanding of text-based classification and sequence prediction. These experiences enhanced my problem-solving abilities and provided valuable insights into the practical application of machine learning across different domains."
   },
-/*
+
   {
     id: "3",
     title: "AI, Data science & Advanced Analytics Intern",
@@ -284,7 +288,7 @@ const experiences = [
     ],
     thoghts : "This internship was a transformative experience that deepened my understanding of data science applications in real-world scenarios, particularly in the telecommunications sector. Working on network congestion detection challenged me to combine theoretical knowledge with practical problem-solving, refining my skills in data analysis, machine learning, and deep learning. I learned the importance of data preprocessing, agile methodologies, and the value of iterative development in delivering efficient solutions. Collaborating with industry professionals enhanced my technical and communication skills, while the project itself highlighted the critical role of proactive resource management in maintaining service quality. This experience has reinforced my passion for data science and motivated me to explore further innovations in AI-driven infrastructure optimization.",
   }
-  */
+  
 ];
 
 const testimonials = [
@@ -524,6 +528,38 @@ const projects = [
 ];
 
 const certifications = [
+  {
+    id: "1a",
+    name: "Data Scientist Associate",
+    provider: "DataCamp",
+    skills: ["Data science", "Python", "Machine Learning"],
+    link: "https://www.datacamp.com/certificate/DSA0016909301868",
+    image: c1a,
+  },
+  {
+    id: "1b",
+    name: "Neural Networks and Deep Learning",
+    provider: "DeepLearning.AI",
+    skills: ["AI", "Python", "Deep Learning"],
+    link: "https://www.coursera.org/account/accomplishments/verify/24JCHNXAOMNI",
+    image: c1b,
+  },
+  {
+    id: "1c",
+    name: "Business Intelligence (BI) Essentials",
+    provider: "IBM",
+    skills: ["BI", "Data Analysis", "ETL"],
+    link: "https://www.coursera.org/account/accomplishments/verify/CY80BDMPQWY8",
+    image: c1c,
+  },
+  {
+    id: "1d",
+    name: "Harnessing the Power of Data with Power BI",
+    provider: "Microsoft",
+    skills: ["BI", "Data Analysis", "ETL", "Power BI"],
+    link: "https://www.coursera.org/account/accomplishments/verify/QH8UUCAA4QIJ",
+    image: c1d,
+  },
   {
     id: "1",
     name: "Computer Vision",
