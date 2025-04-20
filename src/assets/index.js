@@ -18,6 +18,8 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
+import sql from "./tech/sql.png";
+import n4j from "./tech/n4j.png";
 
 import codealpha from "./codealpha.jpeg"
 import codsoft from "./codsoft.jpg"
@@ -26,13 +28,14 @@ import c from "./tech/c.png"
 import django from "./tech/django.png"
 import java from "./tech/java.png"
 import linux from "./tech/linux.png"
-import powerbi from "./tech/powerbi.png"
+import powerbi from "./tech/powerbi.svg"
 import r from "./tech/r.png"
 import python from "./tech/python.png"
 import tf from "./tech/tf.png"
 import next from "./tech/next.svg"
 import uca from "./uca.png"
 import estin from "./estin.png"
+import ca from "./ca.png"
 
 
 import c1 from "./certs/1.png";
@@ -55,6 +58,7 @@ import c1a from "./certs/dsa_dc.png";
 import c1b from "./certs/ia_da.png";
 import c1c from "./certs/ibm_bi.png";
 import c1d from "./certs/mic_bi.png";
+import toeic from "./certs/toeic.png";
 
 import cg1 from "./projects/cg1.png";
 import cg2 from "./projects/cg2.png";
@@ -72,6 +76,8 @@ import ta2 from "./projects/ta2.png";
 import ttt1 from "./projects/ttt1.png";
 import ttt2 from "./projects/ttt2.png";
 import com from "./projects/com.png";
+import stock from "./projects/stock.png";
+import xray from "./projects/xray.png";
 
 import li from "./li.svg"
 
@@ -80,6 +86,9 @@ import bm from "./testimonails/bm.jpeg"
 import bc from "./testimonails/bc.jpeg"
 
 export {
+  stock,
+  xray,
+  ca,
   li,
   uca,
   estin,
@@ -107,6 +116,7 @@ export {
   tailwind,
   threejs,
   c,
+  toeic,
   django,
   java,
   linux,
@@ -152,5 +162,7 @@ export {
   c1a,
   c1b,
   c1c,
-  c1d
+  c1d,
+  n4j,
+  sql
 };

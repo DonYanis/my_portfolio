@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 
-import { useNavigate } from "react-router-dom";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
@@ -19,7 +18,6 @@ const ProjectCard = ({
   images,
   source_code_link,
 }) => {
-  const navigate = useNavigate();
   return (
     <motion.div className="mx-4">
       <Tilt
@@ -51,19 +49,12 @@ const ProjectCard = ({
         </div>
 
         <div
-          className="mt-5 cursor-pointer"
-          onClick={() => {
-            navigate(`/project/${id}`);
-            window.scrollTo(0, 0);
-          }}
+          className="mt-5"
         >
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">
             {description.slice(0, 200)}...
           </p>
-          <div className="text-blue-500 font-semibold text-xl">
-            see more {" >>"}
-          </div>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">

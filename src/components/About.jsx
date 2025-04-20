@@ -47,11 +47,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I am a Computer Science student with expertise in building machine learning 
-        models using tools like Python and TensorFlow. I am also a skilled 
-        web developer, proficient in JavaScript frameworks such as React and Next.js, 
-        as well as Python frameworks like Django. Driven by curiosity and a passion 
-        for growth, I am a quick learner and highly motivated to tackle new challenges.
+        I am a Computer Science student with expertise in building machine learning models using Python, 
+	data analysis with tools like Power BI and SQL, and web development particularly with JavaScript 
+	frameworks such as React and Next.js, as well as Python frameworks like Django. 
+	Driven by curiosity and a passion for growth, I am a quick learner and highly motivated to tackle new challenges.
+
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

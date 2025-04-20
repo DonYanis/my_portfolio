@@ -4,7 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
@@ -13,7 +12,6 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
-  const navigate = useNavigate();
   return (
     <VerticalTimelineElement
 
@@ -36,12 +34,7 @@ const ExperienceCard = ({ experience }) => {
     >
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p onClick={() => { navigate(`/experience/${experience.id}`); window.scrollTo(0, 0);}}
-          className=' text-[20px] font-bold cursor-pointer hover:text-blue-600 text-blue-500'
-          style={{ margin: 0 }}
-        >
-          See More {'>>'}
-        </p>
+        
         <p
           className='text-secondary text-[16px] font-semibold'
           style={{ margin: 0 }}
@@ -49,6 +42,14 @@ const ExperienceCard = ({ experience }) => {
           {experience.company_name}
         </p>
       </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+          {experience.skills.map((tag) => (
+            <span key={`${tag}`} className={`text-[14px] blue-text-gradient`}>
+              #{tag}
+            </span>
+          ))}
+        </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
         {experience.points.map((point, index) => (

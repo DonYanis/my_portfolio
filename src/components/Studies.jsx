@@ -4,7 +4,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
@@ -13,7 +12,6 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
 const StudyCard = ({ study }) => {
-  const navigate = useNavigate();
   return (
     <VerticalTimelineElement
 
@@ -36,12 +34,6 @@ const StudyCard = ({ study }) => {
     >
       <div>
         <h3 className='text-white text-[24px] font-bold'>{study.title}</h3>
-        <p onClick={() => { navigate(`/study/${study.id}`); window.scrollTo(0, 0);}}
-          className=' text-[20px] font-bold cursor-pointer hover:text-blue-600 text-blue-500'
-          style={{ margin: 0 }}
-        >
-          See More {'>>'}
-        </p>
         <p
           className='text-secondary text-[16px] font-semibold'
           style={{ margin: 0 }}

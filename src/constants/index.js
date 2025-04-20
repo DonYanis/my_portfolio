@@ -1,5 +1,6 @@
 import {
-  codealpha,
+  ca,
+  toeic,
   codsoft,
   djezzy,
   mobile,
@@ -24,6 +25,8 @@ import {
   powerbi,
   r,
   python,
+  stock,
+  xray,
   tf,
   next,
   estin,
@@ -66,7 +69,9 @@ import {
   c1a,
   c1b,
   c1c,
-  c1d
+  c1d,
+  sql,
+  n4j
 
 } from "../assets";
 
@@ -194,38 +199,32 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "sql",
+    icon: sql,
+  },
+  {
+    name: "n4j",
+    icon: n4j,
+  },
 ];
 
 const experiences = [
   {
     id:"1",
-    title: "Data Science Intern",
-    company_name: "CodeAlpha",
-    icon: codealpha,
+    title: "Data Analyst Intern",
+    company_name: "Crédit Agricole - CIB",
+    icon: ca,
     iconBg: "#383E56",
-    date: "August 2024",
-    skills : ["Python", "TensorFlow", "Numpy", "Pandas", "Scikit-learn", "Seaborn", "Matplotlib", "Data manipulation", "Time-series analysis", "Predictive analysis", "LSTM neural networks", "Data visualization", "Deep learning methods"],
+    date: "April 2025",
+    skills : ["SQL Server", "PowerBI", "DAX", "Crapull", "Data Analysis"],
     points: [
-      "Designing and implementing advanced classification and text generation models.",
-      "Improving the credit card fraud detection system, which enhanced transaction security.",
-      "Implement a system for detecting dangerous emails, reducing the risks associated with cyber threats.",
-      "Developed a text generation tool that streamlined several operational tasks, improving overall efficiency.",
-    ],
-    parts_description: [
-      {
-          title: "Build a machine learning model to predict survival on the Titanic dataset", 
-          desc: "I built a machine learning model to predict survival on the Titanic dataset. I started by loading and exploring the data. I imputed missing values in the 'Age' and 'Embarked' columns using median and mode, respectively, and dropped the 'Cabin' column due to excessive missing data. I encoded categorical variables, such as 'Sex' and 'Embarked,' into numerical values, and removed less meaningful features like 'Name,' 'Ticket,' and 'PassengerId.' I standardized continuous variables like 'Age' and 'Fare' for improved model performance. I split the dataset into training and test sets, trained several classifiers (Random Forest, Decision Tree, K-Nearest Neighbors, Naive Bayes, and Support Vector Machine), and evaluated their performance using accuracy, precision, recall, and F1 score. The Support Vector Machine (SVM) model performed the best, achieving the highest accuracy (81.56%) and precision (80.60%)."
-      },
-      {
-          title: "Netflix Stock Price Prediction Using LSTM Neural Network", 
-          desc: "I worked on predicting Netflix's stock prices using an LSTM (Long Short-Term Memory) model. I began by loading and exploring the dataset, which contained stock data including open, high, low, close, adjusted close prices, and volume over time. I visualized the data through line and bar plots to explore price trends and trading volumes. I converted the date column to an ordinal format for model processing and normalized the data using MinMaxScaler. I transformed the dataset into sequences for supervised learning, using features to predict future closing prices. I split the data into training and testing sets and trained an LSTM model with two layers and dropout on the training set for 20 epochs. I compared the model's predictions against actual prices and plotted the results to evaluate the stock price prediction model's performance."
-      },
-      {
-          title: "House prices prediction", 
-          desc: "I used a Linear Regression model to predict house prices based on features such as the number of bedrooms, bathrooms, square footage, and other factors. I trained the model using 80% of the data and tested it with the remaining 20%. I evaluated the model's performance using Mean Squared Error (MSE) and R² score, which revealed suboptimal results with an MSE of approximately 988 billion and an R² score of only 0.03. I created a scatter plot comparing real vs. predicted prices, which showed a poor fit, highlighting the need for further model improvement or exploration of alternative techniques for better price prediction."
-      }
-  ],  
-    thoghts : "This internship has had a significant impact on me, both personally and professionally. It provided me with the opportunity to apply theoretical knowledge in a real-world setting, bridging the gap between classroom learning and practical application. The hands-on experience in data analysis, particularly working with machine learning models and real datasets, has enhanced my technical skills and boosted my confidence in using tools like Python, Pandas, and machine learning algorithms. More importantly, the challenges I faced—such as dealing with incomplete or noisy data—taught me resilience and problem-solving skills. I have gained a deeper understanding of the complexities involved in predictive modeling and the importance of continuous learning and adapting. This experience has solidified my passion for data science and has motivated me to further pursue a career in this field, equipped with new insights and skills that will guide my future work." 
+      "Collaborated with finance and management teams to optimize financial control applications.",
+      "Analyzed datasets using SQL to extract actionable insights, improving business decision-making",
+      "Cleaned and processed raw data to enhance accuracy and reliability for stakeholder reports",
+      "Created interactive dashboards in Power BI to visualize trends",
+      "Collaborated with cross-functional teams to define KPIs and track performance metrics",
+    ], 
   },
   {
     id:"2",
@@ -234,61 +233,28 @@ const experiences = [
     icon: codsoft,
     iconBg: "#383E56",
     date: "July 2024",
-    skills : ["Python", "TensorFlow", "Numpy", "Pandas", "Scikit-learn", "Seaborn", "Matplotlib", "Data manipulation", "Time-series analysis", "Predictive analysis", "LSTM neural networks", "Data visualization", "Deep learning methods"],
+    skills : ["Python", "TensorFlow", "Time-series", "LSTM"],
     points: [
-      "Implemented prediction systems using LSTM neural networks for time-series data.",
-      "Enhanced predictive analyses for stock and housing price forecasts.",
-      "Manipulated data and visualized results using Python, TensorFlow, numpy, pandas, sklearn, seaborn, and matplotlib.",
-      "Improved the accuracy of predictive systems.",
-    ],
-    
-    parts_description: [
-      {
-          title: "Model Comparison for Genre Classification Using Logistic Regression and Naive Bayes", 
-          desc: "I focused on genre classification using text descriptions of movies in this project. I processed and cleaned the data by removing numbers, punctuation, stopwords, and applying lemmatization. I performed feature extraction using the TF-IDF method to convert text into numerical form. I trained and evaluated two classifiers, Logistic Regression and Naive Bayes, on the dataset. Logistic Regression achieved an accuracy of approximately 58.5%, while Naive Bayes performed slightly worse with an accuracy of 44.3%. I visualized the precision scores for each class to further assess the models' performances. Logistic Regression showed better performance, demonstrating its superior ability for genre classification in this case."
-      },
-      {
-          title: "Fraud Detection in Financial Transactions Using Machine Learning Models", 
-          desc: "I worked on detecting fraudulent transactions in financial datasets by training and evaluating different machine learning models. The dataset included transaction details such as merchant, amount, category, and user information, with a target variable indicating whether the transaction was fraudulent or not. I performed various preprocessing steps, including feature encoding and dropping irrelevant columns. I split the data into training and testing sets and trained multiple classification models, including Logistic Regression, K-Nearest Neighbors (KNN), and Random Forest. I evaluated the models based on their accuracy and classification report to accurately identify fraud in financial transactions."
-      },
-      {
-          title: "Bank Customer Churn Prediction Using Machine Learning Models", 
-          desc: "I analyzed and predicted customer churn for a bank using machine learning techniques. The dataset included various customer attributes such as credit score, geography, gender, age, tenure, and account balance. After cleaning and exploring the data, I identified key features like 'Age,' 'IsActiveMember,' 'Balance,' and 'Gender' that had strong correlations with customer churn. I preprocessed the data by encoding categorical features and dropping irrelevant ones. I trained several machine learning models, including Decision Trees, Random Forest, and XGBoost, and evaluated their performances using accuracy, precision, and F1 score. XGBoost showed the best performance, achieving an accuracy of 86.25%. I also visualized key data distributions and model comparisons through graphs to enhance insights into customer churn behavior."
-      },
-      {
-          title: "Spam Detection in SMS Messages Using Machine Learning", 
-          desc: "I focused on detecting spam SMS messages using machine learning techniques. I preprocessed the data by cleaning the SMS text, removing punctuation, stopwords, and numbers, and calculating the length and word count of each message. I transformed the cleaned text data into numerical features using the TF-IDF (Term Frequency-Inverse Document Frequency) method. I trained and evaluated several machine learning models, including Naive Bayes, Support Vector Machine, Logistic Regression, Random Forest, and XGBoost, on the dataset. I assessed the models using accuracy, precision, and F1-score metrics and compared their performance to identify the best-performing model for classifying SMS messages as either spam or non-spam."
-      },
-      {
-          title: "Character-Level Text Generation Using LSTM-based Recurrent Neural Networks on Handwritten Word Data", 
-          desc: "I performed character-level text generation using a Recurrent Neural Network (RNN) with LSTM (Long Short-Term Memory) units on a dataset of words from the IAM Handwriting Word Database. I started by preprocessing the data, reading the words from the dataset, cleaning and splitting them into a structured format with columns for word ID, segmentation status, gray level, bounding box dimensions, grammatical tags, and transcriptions. I transformed the transcription data into a series of characters and mapped them to integer indices to create sequences for training the model. I built a neural network model with an embedding layer, two LSTM layers, and a dense output layer to predict the next character in the sequence. I trained the model over 10 epochs, reducing the loss as it learned to predict the next character in the text sequences. After training, I used the model to generate new text sequences by providing a starting string, allowing it to predict subsequent characters one at a time, producing coherent text passages based on the patterns it learned. The generated text demonstrated the model's ability to follow the structural patterns of the training data, with progressively decreasing training loss indicating improved accuracy."
-      }
-  ],  
-    thoghts : "During my machine learning internship, I had the opportunity to work on diverse projects that strengthened my skills in data preprocessing, model selection, and evaluation. I worked on genre classification using Logistic Regression and Naive Bayes, fraud detection in financial transactions with models like KNN and Random Forest, and customer churn prediction using Decision Trees and XGBoost, learning how to handle real-world datasets and select relevant features. Additionally, I explored spam detection in SMS messages using various models, as well as character-level text generation with LSTM-based RNNs, deepening my understanding of text-based classification and sequence prediction. These experiences enhanced my problem-solving abilities and provided valuable insights into the practical application of machine learning across different domains."
+      "Developed an LSTM-based text generation model using Python/TensorFlow.",
+      "Built a stock price prediction system leveraging time-series analysis, improving forecast accuracy.",
+      "Preprocessed and analyzed financial datasets (Python/Pandas) to identify key trends for model training."
+    ],  
   },
 
   {
     id: "3",
-    title: "AI, Data science & Advanced Analytics Intern",
+    title: "Data Scientist Intern ",
     company_name: "Djezzy",
-    skills :["Python", "Pandas", "NumPy", "Scikit-learn", "Keras with TensorFlow", "Matplotlib", "ARIMA models", "Data preprocessing", "Time-series analysis", "Machine learning (LSTM, ARIMA)", "Network optimization", "AI problem-solving", "Agile methodology", "Resource monitoring"],
+    skills :["Python", "TensorFlow", "Time-series", "Network optimization", "Data Science"],
     icon: djezzy,
     iconBg: "#383E56",
     date: "August 2023",
     points: [
-      "Detecting network congestion using AI techniques, focusing on stable resource usage as a sign of congestion.",
-      "Explored solutions like calculating usage differences, analyzing time series with ARIMA models, and using LSTM networks.",
-      "Handled data preprocessing, including missing values and converting time-series data, using Python and Pandas.",
-    ],
-    parts_description: [
-      {
-        title: "AI-Powered Network Congestion Detection and Optimization in Telecommunications", 
-        desc : "During my internship, I worked on designing and implementing a data-driven solution to address the critical issue of network congestion within the company’s infrastructure. The project focused on identifying periods of prolonged resource saturation by leveraging advanced methodologies such as time-series analysis, machine learning algorithms (ARIMA, LSTM), and deep learning techniques. My tasks involved analyzing large datasets, preprocessing and cleaning data, and extracting meaningful insights to identify patterns of resource usage stability indicative of congestion. I implemented multiple approaches, including calculating usage differentials, applying predictive models, and using Long Short-Term Memory (LSTM) networks to detect anomalies and predict potential congestion scenarios. Utilizing tools such as Python, Pandas, NumPy, Scikit-learn, and TensorFlow, I developed an end-to-end solution capable of automating detection and providing actionable insights for proactive resource optimization. This mission allowed me to bridge theoretical knowledge with real-world application while contributing to the organization’s goal of ensuring high system performance and service quality."
-      },
-    ],
-    thoghts : "This internship was a transformative experience that deepened my understanding of data science applications in real-world scenarios, particularly in the telecommunications sector. Working on network congestion detection challenged me to combine theoretical knowledge with practical problem-solving, refining my skills in data analysis, machine learning, and deep learning. I learned the importance of data preprocessing, agile methodologies, and the value of iterative development in delivering efficient solutions. Collaborating with industry professionals enhanced my technical and communication skills, while the project itself highlighted the critical role of proactive resource management in maintaining service quality. This experience has reinforced my passion for data science and motivated me to explore further innovations in AI-driven infrastructure optimization.",
+      "Built a data-driven congestion detection system in networks using LSTM networks and time-series analysis.",
+      "Processed and analyzed large-scale network telemetry datasets (Python, Pandas, NumPy) to identify resource saturation patterns.",
+      "Handled data preprocessing, including missing values and converting time-series data, using Python and Pandas."
+    ],  
   }
-  
 ];
 
 const testimonials = [
@@ -313,6 +279,50 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    id:"1a1",
+    name: "Dental Caries Diagnostic",
+    title : "Dental Caries Diagnostic",
+    description : "A computer vision-based system for automated detection and diagnosis of dental caries from dental panoramic x-ray images.",
+    images : [xray],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenCV",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Computer Vision",
+        color: "pink-text-gradient",
+      },
+    ],
+    source_code_link: "https://www.kaggle.com/code/tarekichalalen/projet-dl",
+  },
+  {
+    id:"1b2",
+    name: "Stock Prices Prediction",
+    title : "Stock Prices Prediction",
+    description : "A deep learning model using LSTM to predict Netflix stock prices based on historical market data.",
+    images : [stock],
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "LSTM",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Deep Learning",
+        color: "pink-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/DonYanis/codealpha_tasks/blob/main/task2/netflix-stock-prediction-using-lstm.ipynb",
+  },
   {
     id:"1",
     name: "Code galaxy",
@@ -532,7 +542,7 @@ const certifications = [
     id: "1a",
     name: "Data Scientist Associate",
     provider: "DataCamp",
-    skills: ["Data science", "Python", "Machine Learning"],
+    skills: ["Data science", "Python", "Machine Learning", "TensorFlow"],
     link: "https://www.datacamp.com/certificate/DSA0016909301868",
     image: c1a,
   },
@@ -540,9 +550,17 @@ const certifications = [
     id: "1b",
     name: "Neural Networks and Deep Learning",
     provider: "DeepLearning.AI",
-    skills: ["AI", "Python", "Deep Learning"],
     link: "https://www.coursera.org/account/accomplishments/verify/24JCHNXAOMNI",
+    skills: ["AI", "Python", "Deep Learning"],
     image: c1b,
+  },
+  {
+    id: "toeic",
+    name: "TOEIC® Listening and Reading, Score of 925/990",
+    provider: "ETS Global",
+    skills: ["English"],
+    link: "https://www.etsglobal.org/fr/en/digital-score-report/86F4F1DD0526A71E30BE923413DBCAF4696297410488207C6DC1C106A422BD82ckhhZmZRaGh4VzRvWkN3ZXdORE1OMnNkMlYrMmRUQlBuRC95cTlLb1c3TTVaUGRv",
+    image: toeic,
   },
   {
     id: "1c",
@@ -588,7 +606,7 @@ const certifications = [
     id: "4",
     name: "Intermediate Machine Learning",
     provider: "Kaggle",
-    skills: ["Machine Learning", "AI", "Python", "Data Science"],
+    skills: ["Machine Learning", "AI", "Python"],
     link: "https://www.kaggle.com/learn/certification/donyanis/intermediate-machine-learning",
     image: c4,
   },
@@ -700,9 +718,10 @@ const studies = [
     date: "2024 - 2025",
     skills : ["AI", "Big Data", "Data Analysis", "Security", "Programming", "Project managment", "Java", "Python", "R"],
     points: [
-      "Learning AI fundamentals, data manipulation, and analysis systems",
+      "Learning AI and neural networks ",
+      "Bussiness intlegence and Data analysis",
       "Security in Computer Science and Networking",
-      "Software Engineering: building tests and refactoring",
+      "Software Engineering and Backedn Develment ",
       "Programming in Python, Java, and R languages"
     ],
     thoghts : "This Master 1 in Computer Science (2024-2025) allows me to deepen my knowledge and skills in key areas such as AI fundamentals, data manipulation, and analysis systems. It equips me to explore security in computer science and networking, refine software engineering practices with a focus on building tests and refactoring, and enhance my programming expertise in Python, Java, and R languages. The program sharpens my problem-solving abilities, fosters a deeper understanding of advanced concepts, and builds my confidence in addressing complex challenges. Furthermore, it provides the opportunity to undertake a 5-month internship, enabling me to apply my learning in a real-world professional environment and solidify my career aspirations.",
@@ -742,4 +761,6 @@ const studies = [
     thoghts : "During my three years of study at ESTIN, I have gained a strong foundation in various aspects of computer science that have shaped my skills and knowledge. I learned the fundamentals of algorithms, mathematics, and Linux OS, which enhanced my problem-solving abilities and technical proficiency. My studies also delved into security methods in computer science, giving me a solid understanding of how to safeguard systems and networks. I developed a deep interest in web development, where I honed my skills in JavaScript and Python, learning to create dynamic and efficient applications. Additionally, my exploration of software engineering methods, including software refactoring and design, has prepared me to approach complex projects with a systematic and methodical mindset. These experiences have not only expanded my technical capabilities but also fostered a passion for continuous learning and innovation."
   }
 ];
+
+
 export {studies, services, technologies, experiences, testimonials, projects, certifications };
